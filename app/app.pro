@@ -59,7 +59,8 @@ SOURCES += \
     imagetooldialog.cpp \
     snippetcompleter.cpp \
     snippetstablemodel.cpp \
-    aboutdialog.cpp
+    aboutdialog.cpp \
+    gitblog.cpp
 
 win32 {
     SOURCES += \
@@ -94,7 +95,8 @@ HEADERS  += \
     imagetooldialog.h \
     snippetcompleter.h \
     snippetstablemodel.h \
-    aboutdialog.h
+    aboutdialog.h \
+    gitblog.h
 
 FORMS    += \
     mainwindow.ui \
@@ -105,7 +107,8 @@ FORMS    += \
     optionsdialog.ui \
     tabletooldialog.ui \
     imagetooldialog.ui \
-    aboutdialog.ui
+    aboutdialog.ui \
+    gitblog.ui
 
 RESOURCES += \
     resources.qrc \

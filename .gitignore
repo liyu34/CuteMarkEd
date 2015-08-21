@@ -58,6 +58,8 @@ app/cutemarked
 *.suo
 *.user
 *.sln.docstates
+*.vcxproj
+*.vcxproj.filters
 
 # Build results
 [Dd]ebug/

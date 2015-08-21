@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "mainwindow.h"
-
+#include "gitblog.h"
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QLibraryInfo>
@@ -90,7 +90,8 @@ int main(int argc, char *argv[])
     if (!cmdLineArgs.isEmpty()) {
         fileName = cmdLineArgs.at(0);
     }
-
+    GitBlog g;
+    g.show();
     MainWindow w(fileName);
     w.show();
 

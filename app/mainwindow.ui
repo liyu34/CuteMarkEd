@@ -167,7 +167,7 @@
      <x>0</x>
      <y>0</y>
      <width>850</width>
-     <height>21</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -298,11 +298,18 @@
     <addaction name="separator"/>
     <addaction name="actionOptions"/>
    </widget>
+   <widget class="QMenu" name="menuGitblog">
+    <property name="title">
+     <string>gitblog</string>
+    </property>
+    <addaction name="actionPrefix"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
    <addaction name="menuView"/>
    <addaction name="menuExtras"/>
    <addaction name="menuHelp"/>
+   <addaction name="menuGitblog"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <widget class="QDockWidget" name="dockWidget">
@@ -814,6 +821,11 @@
    </property>
    <property name="text">
     <string>&amp;Diagram Support</string>
+   </property>
+  </action>
+  <action name="actionPrefix">
+   <property name="text">
+    <string>Prefix</string>
    </property>
   </action>
  </widget>

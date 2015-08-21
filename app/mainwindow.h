@@ -20,7 +20,7 @@
 #include <QMainWindow>
 #include <QMap>
 #include <QHash>
-
+#include <gitblog.h>
 namespace Ui {
 class MainWindow;
 }
@@ -128,6 +128,8 @@ private slots:
     void proxyConfigurationChanged();
     void markdownConverterChanged();
 
+    void gitblogSetting();
+    void gitblogGetSetting(QString setting);
 private:
     void setupUi();
     void setupActions();
@@ -163,6 +165,8 @@ private:
     QString fileName;
     float splitFactor;
     bool rightViewCollapsed;
+    GitBlog *g;
+    QString gbSettings;
 };
 
 #endif // MAINWINDOW_H

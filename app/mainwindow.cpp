@@ -67,6 +67,7 @@
 #include "snippetcompleter.h"
 #include "tabletooldialog.h"
 
+
 MainWindow::MainWindow(const QString &fileName, QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
@@ -85,6 +86,8 @@ MainWindow::MainWindow(const QString &fileName, QWidget *parent) :
     setupUi();
 
     setFileName(fileName);
+
+    connect(ui->actionPrefix,SIGNAL(triggered()),this,SLOT(gitblogSetting()));
 
     QTimer::singleShot(0, this, SLOT(initializeApp()));
 }
@@ -1289,3 +1292,19 @@ void MainWindow::writeSettings()
     settings.setValue("mainWindow/windowState", saveState());
 }
 
+void MainWindow::gitblogSetting()
+{
+    g = new GitBlog();
+    connect(g,SIGNAL(SendSettings(QString)),this,SLOT(gitblogGetSetting(QString)));
+    g->show();
+}
+
+void MainWindow::gitblogGetSetting(QString setting)
+{
+    g->close();
+    gbSettings = setting;
+    QTextDocument *old = ui->plainTextEdit->document();
+    QString olds = old->toPlainText();
+    QString final = setting + olds;
+    ui->plainTextEdit->document()->setPlainText(final);
+}

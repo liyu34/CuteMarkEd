@@ -60,7 +60,9 @@ SOURCES += \
     snippetcompleter.cpp \
     snippetstablemodel.cpp \
     aboutdialog.cpp \
-    gitblog.cpp
+    gitblog.cpp \
+    mytextedit.cpp \
+    addcategorydialog.cpp
 
 win32 {
     SOURCES += \
@@ -96,7 +98,9 @@ HEADERS  += \
     snippetcompleter.h \
     snippetstablemodel.h \
     aboutdialog.h \
-    gitblog.h
+    gitblog.h \
+    mytextedit.h \
+    addcategorydialog.h
 
 FORMS    += \
     mainwindow.ui \
@@ -108,7 +112,8 @@ FORMS    += \
     tabletooldialog.ui \
     imagetooldialog.ui \
     aboutdialog.ui \
-    gitblog.ui
+    gitblog.ui \
+    addcategorydialog.ui
 
 RESOURCES += \
     resources.qrc \
